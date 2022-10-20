@@ -1,0 +1,13 @@
+version: 2.1
+
+setup: true
+
+orbs:
+  config-splitting: circle-makotom-orbs/config-splitting@0.0.6
+
+workflows:
+  setup:
+    jobs:
+      - config-splitting/run-all-modular-configs:
+          base-revision: main
+          module-list-file: .circleci/modules.txt
